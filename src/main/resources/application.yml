@@ -1,0 +1,27 @@
+---
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: true
+        git:
+          uri: https://github.com/sambitce/learning-microservices-springcloud
+          #username: abc
+          #password: abc
+          search-paths:
+            - 'station*'
+          repos:
+             local:
+                pattern: '*/local'
+                uri: https://github.com/sambitce/learning-microservices-springcloud-local # alt
+                search-paths:
+                 - 'station*'
+security:
+  basic:
+    enabled: true
+  user:
+    name: sam
+    password: sam
